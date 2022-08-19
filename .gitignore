@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#token
+.token_telegram.json
+
 # C extensions
 *.so
 
