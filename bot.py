@@ -1,4 +1,4 @@
-mport logging
+import logging
 import asyncio
 from aiogram import Bot, Dispatcher, executor, types
 import uuid
@@ -50,5 +50,5 @@ async def cancel_handler(message: types.Message):
     # await state.finish()
     await message.reply('Canceled, enter /start', 
                         reply_markup=types.ReplyKeyboardRemove())
-if name == '__main__':
+if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
