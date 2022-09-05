@@ -68,7 +68,7 @@ async def echo(message: types.Message):
     plant_image = np.array(Image.open(io.BytesIO(file_in_io.read())))
     await bot.send_message(message.from_user.id, "Neural nets started!")
     task = run_model(image=plant_image)
-    human_dict = {0: "Mint ☘️", 1: "Rausmarine 🍃"}
+    human_dict = {0: "Mint", 1: "Rausmarine"}
     await message.answer(human_dict[task])
 
 
