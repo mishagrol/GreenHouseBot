@@ -11,7 +11,6 @@ import torch.nn.functional as F
 import torchvision.transforms as transforms
 import matplotlib.pyplot as plt
 import numpy as np
-import pynvml
 from utils import Network
 
 credintails = json.load(open(".token_telegram.json", "r"))
@@ -24,7 +23,7 @@ bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
 
-def run_model(image: np.array) -> int:
+def run_model(image: np.ndarray) -> int:
 
     ### BEGIN
     cnn_model = ...
